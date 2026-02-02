@@ -4,11 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/vidtube">
-  <App />
-</BrowserRouter>
-
-  </React.StrictMode>,
+ReactDOM.render(
+  <BrowserRouter basename="/video-sharing-platform-react">
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
 )
