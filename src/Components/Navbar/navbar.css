@@ -1,0 +1,163 @@
+/* =========================
+   Base Navbar Styles
+========================= */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* =========================
+   Left Section
+========================= */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left .menu-icon {
+    width: 22px;
+    cursor: pointer;
+}
+
+.nav-left .logo {
+    width: 130px;
+    transition: width 0.3s ease;
+}
+
+/* =========================
+   Middle Section (Search)
+========================= */
+.nav-middle {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-middle .search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 25px;
+    max-width: 100%;
+}
+
+.nav-middle .search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    min-width: 60px;
+}
+
+.nav-middle .search-box img {
+    width: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* =========================
+   Right Section
+========================= */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.nav-right .user-icon {
+    width: 35px;
+    border-radius: 50%;
+}
+
+/* =========================
+   Tablet Responsive
+========================= */
+@media (max-width: 900px) {
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-left .logo {
+        width: 90px;
+    }
+
+    .nav-middle .search-box {
+        padding: 6px 10px;
+    }
+
+    .nav-middle .search-box input {
+        width: 120px;
+    }
+
+    .nav-right img:not(.user-icon) {
+        width: 20px;
+    }
+
+    .nav-right .user-icon {
+        width: 30px;
+    }
+}
+
+/* =========================
+   Mobile Responsive
+========================= */
+@media (max-width: 600px) {
+
+    /* Hide Search Input */
+    .nav-middle .search-box input {
+        display: none;
+    }
+
+    /* Make Search Icon Circle */
+    .nav-middle .search-box {
+        width: 35px;
+        height: 35px;
+        padding: 6px;
+        border-radius: 50%;
+        justify-content: center;
+        border: none;
+    }
+
+    /* Bigger Search Icon */
+    .nav-middle .search-box img {
+        width: 18px;
+        margin: 0;
+    }
+
+    /* Move Search to Right */
+    .nav-middle {
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+
+    /* Adjust Logo */
+    .nav-left .logo {
+        width: 70px;
+    }
+
+    /* Adjust Profile */
+    .nav-right .user-icon {
+        width: 25px;
+    }
+
+    /* Reduce Padding */
+    nav {
+        padding: 8px 3%;
+    }
+}
